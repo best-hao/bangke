@@ -1,0 +1,6 @@
+<view class="row">
+  <image bindtap="previewImage" data-index="{{index}}" class="tempImg" src="{{item}}" wx:for="{{tempFilePaths}}"></image>
+  <view class="upload row-center" bindtap="chooseImage">
+    <image src="/images/carm.png"></image>
+  </view>
+</view>

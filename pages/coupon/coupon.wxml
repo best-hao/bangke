@@ -1,0 +1,45 @@
+<view>
+  <view class="item" wx:for="{{[1,2,3]}}">
+    <view class="header row">
+      <view class="column wrap">
+        <view class="price">30</view>
+        <view class="des">满100可用</view>
+      </view>
+      <view class="split"></view>
+      <view class="shop">
+        <view class="shop-name">大唐和合（南湖店）</view>
+        <view class="date">2018.06.21 - 2018.07.30</view>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="row-between footer">
+      <text>指定店铺使用</text>
+      <view class="row ">
+        <navigator>立即使用</navigator>
+        <image class="icon-arrow-right" src="/images/arrow-right.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="item disabled" wx:for="{{[1,2,3]}}">
+    <view class="status">已使用</view>
+    <view class="header row">
+      <view class="column wrap">
+        <view class="price">30</view>
+        <view class="des">满100可用</view>
+      </view>
+      <view class="split"></view>
+      <view class="shop">
+        <view class="shop-name">大唐和合（南湖店）</view>
+        <view class="date">2018.06.21 - 2018.07.30</view>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="row-between footer">
+      <text>指定店铺使用</text>
+      <view class="row use_text">
+        <navigator>立即使用</navigator>
+        <image class="icon-arrow-right" src="/images/arrow-right.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

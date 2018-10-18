@@ -1,0 +1,43 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="search-wrap row">
+    <view class="input-wrap row-center">
+      <input type="text" placeholder='想要找什么？搜搜看' placeholder-style="font-size: 24rpx"></input>
+      <icon class="icon" type="clear" size="18" color='#c8c8c8'></icon>
+    </view>
+    <view class="btn">搜索</view>
+  </view>
+  <view class="block">
+    <view class="block-title">热门搜索</view>
+    <view class="block-body">
+      <view class="tag">推拿</view>
+      <view class="tag">推拿</view>
+      <view class="tag">推拿推拿</view>
+      <view class="tag">推推拿</view>
+      <view class="tag">推拿</view>
+    </view>
+  </view>
+   <view class="block">
+    <view class="block-title">搜索历史</view>
+    <view class="block-body">
+      <view class="history-item row-between">
+        <view class="row">
+          <image class="icon-history" src="/images/history.png"></image>
+          拔火罐
+        </view>
+        <view class="clear">
+         <image class="icon-clear" src="/images/clear.png"></image>
+        </view>
+      </view>
+       <view class="history-item row-between">
+        <view class="row">
+          <image class="icon-history" src="/images/history.png"></image>
+          拔火罐
+        </view>
+        <view class="clear">
+         <image class="icon-clear" src="/images/clear.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

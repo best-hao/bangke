@@ -1,0 +1,171 @@
+page {
+  padding-bottom: 120rpx;
+}
+.bar {
+  height: 20rpx;
+  background: #f8f8f8;
+}
+.wrap {
+  padding: 0 40rpx;
+  background: #fff;
+}
+
+.header {
+  height: 108rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+  font-size: 32rpx;
+  color: #323232;
+  font-weight: bold;
+}
+.header image {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+.product {
+  align-items: flex-start;
+  padding: 30rpx 40rpx;
+}
+.product .caption {
+  flex: 1;
+}
+.thum {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+}
+.product-title, .product-price {
+  color: #323232;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.tags {
+  padding-bottom: 30rpx;
+}
+.tags view {
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  background: #f3fbfb;
+  color: #1fb7b6;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  border-radius: 5rpx;
+}
+.cell {
+  height: 108rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+  color: #323232;
+  font-weight: bold;
+  font-size: 32rpx;  
+}
+.cell .price {
+  color: #ff4f4f;
+  font-size: 30rpx;
+}
+.cell .icon-arrow-right {
+  margin-left: 20rpx;
+}
+.cell text {
+  color: #c8c8c8;
+  font-size: 30rpx;
+}
+.footer {
+  position: fixed;
+  width: 100%;
+  height: 100rpx;
+  bottom: 0;
+  left: 0;
+}
+.footer .left {
+  width: 450rpx;
+  background: #fff;
+  height: 100rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid #f8f8f8;
+  font-size: 30rpx;
+  color: #323232;
+  text-align: center;
+}
+.footer .left text {
+  color: #ff4f4f;
+  font-size: 32rpx;
+  margin-left: 20rpx;
+}
+.footer .right {
+  background: #1fb7b6;
+  color: #fff;
+  font-size: 32rpx;
+  flex: 1;
+  height: 100rpx;
+}
+
+/* 弹窗 */
+.buy-wrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 3;
+  display: none;
+}
+.buy-wrap.show {
+  display: block;
+}
+.buy-wrap.show .inner-wrap{
+  transform: translateY(0); 
+}
+.buy-wrap .inner-wrap {
+  position: absolute;
+  width: 100%;
+  height: 800rpx;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  padding: 40rpx;
+  box-sizing: border-box;
+  transform: translateY(100%);
+  transition: transform .2s;  
+}
+
+.buy-btn {
+  position: absolute;
+  bottom: 100rpx;
+  left: 50%;
+  width: 670rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  transform: translateX(-50%);
+  color: #fff;
+  background: #1fb7b6;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 32rpx;
+}
+
+.price-wrap {
+  color: #c8c8c8;
+  font-size: 26rpx;
+}
+.price-wrap text {
+  color: #ff4f4f;
+  font-size: 32rpx;
+}
+.tips {
+  color: #323232;
+  font-size: 26rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.pay-cell {
+  height: 120rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+  font-size: 32rpx;
+  color: #323232;
+  font-weight: bold;
+}

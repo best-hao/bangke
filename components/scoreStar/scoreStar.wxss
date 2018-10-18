@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+.level {
+  margin-right: 10rpx;
+}
+.level .level-num {
+  font-size: 26rpx;
+}

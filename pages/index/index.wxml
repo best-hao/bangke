@@ -1,0 +1,114 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="banner" autoplay>
+    <swiper-item wx:for="{{banners}}" wx:key="{{item.bannerId}}">
+      <!-- <navigator url="/pages/detail/detail?companyId={{item.companyId}}"> -->
+        <image src="{{item.imagePath}}"></image>
+      <!-- </navigator> -->
+    </swiper-item>
+  </swiper>
+  <!-- 搜索框 开始 -->
+  <navigator url="/pages/search/search" class="search-wrap row-center">
+    <image class="icon-search" src="/images/search.png"></image>
+    想要找什么？搜搜看
+  </navigator>
+  <!-- 搜索框 结束 -->
+  <view class="mt-50 row">
+    <navigator url="/pages/map/map" class="lbs row-center">
+      <image class="icon-address" src="/images/address.png"></image>
+      附近
+    </navigator>
+    <scroll-view class="scroll-wrap" scroll-x>
+      <view class="cate {{tradeId == null ? 'active' : ''}}" bindtap="getCompanyByTradeId" data-tradeId="{{null}}">全部</view>
+      <view class="cate {{tradeId == item.typeId ? 'active' : ''}}" wx:for="{{companyTypes}}" data-tradeId="{{item.typeId}}" wx:key="{{item.typeId}}" bindtap="getCompanyByTradeId">{{item.typeName}}</view>
+    </scroll-view>
+  </view>
+  <view class="mt-50">
+    <navigator hover-class="none" url="/pages/detail/detail?companyId={{item.companyId}}&distance={{item.distance}}" class="service_item row" wx:for="{{companyList}}" wx:key="{{item.companyId}}">
+      <view class="thum">
+        <image src="{{item.logo}}"></image>
+      </view>
+      <view class="caption">
+        <view class="title">{{item.name}}</view>
+        <view class="row-between mt-10">
+          <view>
+            <text class="price">￥{{item.consume}}</text>
+            <text class="average_text">/平均消费</text>
+          </view>
+          <view class="distance">
+            <text>距离</text>
+            <text class="distance-num">{{item.distance}}</text>
+          </view>
+        </view>
+        <score-star icon-star="icon-star" score="{{item.judge}}"></score-star>
+        <!-- <view class="row level">
+          <view class="row">
+            <image class="icon-star" src="/images/star2.png"></image>
+            <image class="icon-star" src="/images/star2.png"></image>
+            <image class="icon-star" src="/images/star2.png"></image>
+            <image class="icon-star" src="/images/star2.png"></image>
+            <image class="icon-star" src="/images/star1.png"></image>
+          </view>
+          <text class="level-num">{{item.judge}}</text>
+        </view>
+        <!-- <view class="row activity ">
+          <view class="tag">满减</view>
+          <text class="text">满200元减50元</text>
+        </view>  -->
+      </view>
+    </navigator>
+    
+    <view class="noMoreText" wx:if="{{noMoreData}}">没有更多数据了</view>
+  </view>
+  <view class="row-center loading" wx:if="{{loading}}">
+      <image src="/images/loading.gif"></image>
+      正在加载中...
+    </view>
+  <!-- <view class="modal" hidden>
+    <view class="close row-center">x</view>
+    <image class="bgpic" src="/images/red.png"></image>
+    <view class="coupon-wrap">
+      <view class="coupon-header">
+        <view class="title">送你30元优惠券</view>
+        <view class="sub">快去下单吧！</view>
+      </view>
+      <view class="coupon-body">
+        <view class="row-between top">
+          <view class="left column">
+            <view class="num">30</view>
+            <view class="text">满100元可用</view>
+          </view>
+          <view class="split"></view>
+          <view class="right">
+            <view class="title">大唐合合（南湖店)</view>
+            <view class="text">2018.06.21-2018.06.30</view>
+          </view>
+        </view>
+        <view class="coupon-split"></view>
+        <view class="row-between footer">
+          <text>限指定店铺使用</text>
+          <view class="row">
+            立即使用
+            <image class="icon-arrow-right" src="/images/arrow-right.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <!-- <view class="mask"></view> -->
+</view>
+
+
+
+
+
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>

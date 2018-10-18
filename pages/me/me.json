@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "score-star": "/components/scoreStar/scoreStar"
+  }
+}

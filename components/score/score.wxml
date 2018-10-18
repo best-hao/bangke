@@ -1,0 +1,5 @@
+<view class="stars row-center">
+  <view class="box" wx:for="{{stars}}" bindtap="score" data-score="{{index + 1}}">
+    <image class="star" src="{{item}}"></image>
+  </view>
+</view>

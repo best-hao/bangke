@@ -1,0 +1,71 @@
+/* pages/search/search.wxss */
+.search-wrap {
+  margin-top: 20rpx;
+}
+
+.input-wrap {
+  box-sizing: border-box;
+  width: 560rpx;
+  height: 68rpx;
+  border-radius: 10rpx;
+  background: #f8f8f8;
+  line-height: 68rpx;
+  padding: 0 40rpx;
+  position: relative;
+}
+
+.input-wrap input {
+  font-size: 26rpx;
+  flex: 1;
+}
+
+.search-wrap .btn {
+  font-size: 32rpx;
+  color: #323232;
+  text-align: center;
+  flex: 1;
+}
+
+.icon {
+  position: absolute;
+  right: 10rpx;
+  top: 50%;
+  height: 18px;
+  transform: translateY(-50%);
+}
+
+.block {
+  margin-top: 60rpx;
+}
+.block .block-title {
+  font-size: 30rpx;
+  color: #323232;
+  font-weight: bold;
+}
+
+.tag {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #26adac;
+  background: #f3f9f9;
+  padding: 0 30rpx;
+  display: inline-block;
+  border-radius: 10rpx;
+  margin-top: 36rpx;
+  margin-right: 30rpx;
+}
+
+.history-item {
+  height: 109rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+  font-size: 28rpx;
+}
+
+.history-item .icon-history {
+  margin-right: 20rpx;
+}
+.history-item .clear {
+  padding: 10rpx;
+}

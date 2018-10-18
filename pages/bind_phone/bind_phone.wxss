@@ -1,0 +1,36 @@
+page {
+  background: #f8f8f8;
+}
+.phone {
+  width: 150rpx;
+  height: 300rpx;
+  display: block;
+  margin: 100rpx auto 60rpx;
+}
+
+.text {
+  font-size: 34rpx;
+  color: #323232;
+  font-weight: bold;
+  text-align: center;
+}
+.btn {
+  width: 650rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 90rpx;
+  background: #1fb7b6;
+  margin: 100rpx auto 0;
+}
+.btn button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 0;
+  line-height: 90rpx;
+  font-size: 32rpx;
+}
+.btn button::after {
+  border: none;
+}

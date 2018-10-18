@@ -1,0 +1,144 @@
+<view class="tabs row">
+  <view class="tab_item {{tabindex == 0 ? 'active': ''}}" bindtap="bindtab" data-index="0">全部</view>
+  <view class="tab_item {{tabindex == 1 ? 'active': ''}}" bindtap="bindtab" data-index="1">待安排</view>
+  <view class="tab_item {{tabindex == 2 ? 'active': ''}}" bindtap="bindtab" data-index="2">已完结</view>
+  <view class="tab_item {{tabindex == 3 ? 'active': ''}}" bindtap="bindtab" data-index="3">待评价</view>
+  <view class="tab_item {{tabindex == 5 ? 'active': ''}}" bindtap="bindtab" data-index="5">清屏</view>
+</view>
+<view class="list">
+  <!-- <loading row-center="row-center"></loading> -->
+  <!-- 待付款 开始 -->
+  <!-- <template is="{{}}" wx:for="{{list}}" wx:key="{{item.orderId}}" data="{{...item}}" /> -->
+  <template is="{{tools.statusToText(item.status, item.refundStatus)}}" wx:for="{{list}}" wx:key="{{item.orderId}}" data="{{...item}}" />
+  <!-- 待付款 结束 -->
+
+</view>
+<wxs module="tools">
+  var statusToText = function (status, refundStatus){
+      if(refundStatus !== null) {
+        return 'refunds'
+      } else {
+        switch (status) {
+          case "1":
+            return 'pending';
+            break;
+          case "2":
+            return 'toBeConsumed';
+            break;
+          case "3":
+            return 'evaluated';  
+            break;      
+        }
+      }
+  }
+module.exports.statusToText = statusToText;
+</wxs>
+
+<!-- 待付款 -->
+<template name="pending">
+  <view class="order">
+    <view class="order-header row">
+      <image class="logo" src="{{logo}}"></image>
+      {{name}}
+    </view>
+    <view class="order-body">
+      <view class="row-between">
+        <view class="title">{{title}}</view>
+        <view class="status">待付款</view>
+      </view>
+      <view class="price">￥{{price}} ×{{num}}</view>
+      <view class="price"><text wx:if="{{technicianName}}">技师：{{technicianName}}</text> 时间：{{createTime}}</view>
+      <view class="tags row">
+        <view>随时退</view>
+        <view>过期退</view>
+      </view>
+      <navigator url="/pages/payment_peding/payment_peding?orderId={{orderId}}" class="btn">付款</navigator>
+    </view>
+  </view>
+</template>
+<!-- 待消费 -->
+<template name="toBeConsumed">
+  <navigator url="/pages/order_use/order_use?orderId={{orderId}}" class="order">
+    <view class="order-header row">
+      <image class="logo" src="{{logo}}"></image>
+      {{name}}
+    </view>
+    <view class="order-body">
+      <view class="row-between">
+        <view class="title">{{title}}</view>
+        <view class="status">待消费</view>
+      </view>
+      <view class="price">￥{{price}} ×{{num}}</view>
+      <view class="tags row">
+        <view>随时退</view>
+        <view>过期退</view>
+      </view>
+    </view>
+  </navigator>
+</template>
+<!-- 待评价 -->
+<template name="evaluated">
+  <view class="order">
+    <view class="order-header row">
+      <image class="logo" src="{{logo}}"></image>
+      {{name}}
+    </view>
+    <view class="order-body">
+      <view class="row-between">
+        <view class="title">{{title}}</view>
+        <!-- <view class="status gray">退款成功</view> -->
+      </view>
+      <view class="price">￥{{price}} ×{{num}}</view>
+      <!-- <view class="price">技师：李晓宇 时间：6.21 15：30</view> -->
+      <view class="tags row">
+        <view>随时退</view>
+        <view>过期退</view>
+      </view>
+      <navigator url="/pages/comment/comment" class="btn">评价</navigator>
+    </view>
+  </view>
+</template>
+<!-- 退款中 -->
+<template name="refunds">
+  <view class="order">
+    <view class="order-header row">
+      <image class="logo" src="{{logo}}"></image>
+      {{name}}
+    </view>
+    <view class="order-body">
+      <view class="row-between">
+        <view class="title">{{title}}</view>
+        <view class="status">退款中</view>
+      </view>
+      <view class="price">￥{{price}} ×{{num}}</view>
+      <!-- <view class="price">技师：李晓宇 时间：6.21 15：30</view> -->
+      <view class="tags row">
+        <view>随时退</view>
+        <view>过期退</view>
+      </view>
+      <!-- <view class="btn">评价</view> -->
+    </view>
+  </view>
+</template>
+<!-- 退款成功 -->
+<template name="refundsSuccess">
+  <view class="order">
+    <view class="order-header row">
+      <image class="logo" src="{{logo}}"></image>
+      {{name}}
+    </view>
+    <view class="order-body">
+      <view class="row-between">
+        <view class="title">{{title}}</view>
+        <view class="status gray">退款成功</view>
+      </view>
+      <view class="price">￥{{price}} ×{{num}}</view>
+      <!-- <view class="price">技师：李晓宇 时间：6.21 15：30</view> -->
+      <view class="tags row">
+        <view>随时退</view>
+        <view>过期退</view>
+      </view>
+      <navigator url="/pages/comment/comment" class="btn">评价</navigator>
+    </view>
+  </view>
+</template>

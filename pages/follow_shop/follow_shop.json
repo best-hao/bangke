@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "关注店铺",
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "usingComponents": {
+    "loading": "/components/loading/loading",
+    "score-star": "/components/scoreStar/scoreStar"
+  }
+}

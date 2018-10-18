@@ -1,0 +1,14 @@
+.loading {
+  font-size: 28rpx;
+  color: #c8c8c8;
+  
+}
+.row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading image {
+  width: 50rpx;
+  height: 50rpx;
+}

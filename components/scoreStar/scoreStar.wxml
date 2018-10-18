@@ -1,0 +1,10 @@
+<view class="row level">
+  <view class="row">
+    <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="num">
+      <image class="icon-star" wx:if="{{num <= score + 1}}" src="/images/star2.png"></image>
+      <image class="icon-star" wx:elif="{{num > score + 1 }}" src="/images/star2.2.png"></image>
+      <image class="icon-star" wx:else="{{num == score + 1}}" src="/images/star1.png"></image>
+    </block>
+  </view>
+  <text class="level-num" wx:if="{{shownum}}">{{score}}</text>
+</view>

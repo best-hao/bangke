@@ -1,0 +1,111 @@
+page {
+  background: #f8f8f8;
+  padding-top: 120rpx;
+}
+
+.tabs {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 120rpx;
+  background: #fff;
+  z-index: 10;
+}
+
+.tabs .tab_item {
+  position: relative;
+  flex: 1;
+  color: #323232;
+  font-size: 32rpx;
+  text-align: center;
+  height: 100%;
+  line-height: 120rpx;
+}
+
+.tabs .tab_item.active::after {
+  content: '';
+  position: absolute;
+  width: 40rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background: #1fb7b6;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.order {
+  margin-top: 20rpx;
+  background: #fff;
+  padding: 0 40rpx;
+}
+
+.order .order-header {
+  height: 120rpx;
+  border-bottom: 2rpx solid #f8f8f8;
+  color: #323232;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.order .order-header .logo {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 5rpx;
+  margin-right: 20rpx;
+}
+
+.order .order-body {
+  position: relative;
+  padding: 40rpx 0;
+}
+
+.title, .status {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #323232;
+}
+
+.status {
+  color: #1fb7b6;
+}
+
+.gray {
+  color: #c8c8c8;
+}
+
+.price {
+  font-size: 28rpx;
+  line-height: 70rpx;
+}
+
+.info {
+  font-size: 26rpx;
+}
+
+.tags view {
+  height: 46rpx;
+  line-height: 46rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  padding: 0 10rpx;
+  color: #1fb7b6;
+  background: #f3fbfb;
+  margin-right: 30rpx;
+  margin-top: 10rpx;
+}
+
+.order .order-body .btn {
+  position: absolute;
+  width: 140rpx;
+  height: 64rpx;
+  right: 0;
+  bottom: 40rpx;
+  line-height: 64rpx;
+  border-radius: 15rpx;
+  color: #fff;
+  background: #1fb7b6;
+  font-size: 28rpx;
+  text-align: center;
+}

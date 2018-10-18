@@ -1,0 +1,16 @@
+<view>  
+  <navigator url="/pages/detail/detail?companyId={{item.companyId}}" class="item row" wx:for="{{companyList}}" wx:key="{{item.companyId}}">
+    <image class="thum" src="{{item.poster}}"></image>
+    <view class="caption column-between">
+      <view class="title">{{item.name}}</view>
+      <score-star icon-star="icon-star" score="{{item.judge}}"></score-star>
+      <view class="pos">{{item.address}}</view>
+    </view>
+    <view class="dot row" bindtap="showBtn" data-index="{{index}}">
+      <view></view>
+      <view></view>
+      <view></view>
+      <view bindtap="uncollect" data-id="{{btns[index].companyId}}" class="btn {{btns[index].active ? 'show' : ''}}">取消关注</view>
+    </view>
+  </navigator>
+</view>

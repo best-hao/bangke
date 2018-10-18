@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "店线",
+  "usingComponents": {
+    "score-star": "/components/scoreStar/scoreStar"
+  }
+}

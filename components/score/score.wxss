@@ -1,0 +1,7 @@
+.star {
+  width: 30rpx;
+  height: 28rpx;
+}
+.box {
+  padding: 7rpx;
+}

@@ -1,0 +1,5 @@
+<image class="phone" src="/images/bind_phone.png"></image>
+<!-- <view class="text">绑定手机号：186****5888</view> -->
+<view class="btn">
+  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定微信</button>
+</view>

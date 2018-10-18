@@ -1,0 +1,15 @@
+<view>
+  <navigator url="/pages/technician_detail/technician_detail?id={{item.technicianId}}" class="item row" wx:for="{{list}}" wx:key="{{item.technicianId}}">
+    <image class="avatar" src="{{item.poster}}"></image>
+    <view>
+      <view class="name">{{item.realName}}</view>
+      <view class="shop">大唐和合（南湖店）</view>
+    </view>
+    <view class="dot row" bindtap="showBtn" data-index="{{index}}">
+      <view></view>
+      <view></view>
+      <view></view>
+      <view bindtap="uncollect" data-id="{{btns[index].companyId}}" class="btn {{btns[index].active ? 'show' : ''}}">取消关注</view>
+    </view>
+  </navigator>
+</view>

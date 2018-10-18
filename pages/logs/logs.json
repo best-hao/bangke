@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "查看启动日志",
+  "usingComponents": {
+    "score": "/components/score/score",
+    "score-star": "/components/scoreStar/scoreStar"
+  }
+}

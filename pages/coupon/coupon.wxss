@@ -1,0 +1,109 @@
+page {
+  background: #f8f8f8;
+}
+.item {
+  position: relative;
+  width: 670rpx;
+  background: #fff;
+  margin: 40rpx auto 0;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.item .header {
+  height: 160rpx;
+}
+.item .status {
+  display: none;
+}
+.price {
+  font-size: 44rpx;
+  font-weight: bold;
+}
+.wrap {
+  width: 172rpx;
+}
+.split {
+  background: #f8f8f8;
+  width: 2rpx;
+  height: 60rpx;
+}
+.price::before {
+  content: '￥';
+  font-size: 30rpx;
+}
+.des {
+  font-size: 28rpx;
+  color: #ff4f4f;
+}
+.shop {
+  padding-left: 50rpx;
+}
+.shop-name {
+  font-size: 32rpx;
+  color: #323232;
+  font-weight: bold;
+}
+.date {
+  color: #c8c8c8;
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+.line {
+  position: relative;
+  border-bottom: 2rpx dashed #e6e6e6;
+  width: 636rpx;
+  margin: 0 auto;
+}
+.line::before,
+.line::after {
+  content: '';
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #fff;
+  top: -14rpx;
+  box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+  
+}
+.line::before {
+  left: -34rpx;
+}
+.line::after {
+  right: -34rpx;
+}
+.footer {
+  height: 50rpx;
+  padding: 20rpx;
+}
+.footer text {
+  color: #c8c8c8;
+  font-size: 26rpx;
+}
+.footer navigator {
+  color: #1fb7b6;
+  font-size: 28rpx;
+  padding: 0 10rpx;
+}
+.disabled {
+  background: #fcfcfc;
+}
+.disabled .footer text,
+.disabled .des {
+  color: #323232;
+}
+.disabled .use_text {
+  display: none;
+}
+.disabled .status {
+  display: block;
+  position: absolute;
+  right: 20rpx;
+  top: 40rpx;
+  color: #c8c8c8;
+  font-size: 48rpx;
+  font-weight: bold;
+  transform: rotate(45deg);
+}

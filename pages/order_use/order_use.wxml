@@ -1,0 +1,51 @@
+<view class="order" wx:if="{{detail}}">
+  <view class="order-body">
+    <view class="row-between">
+      <view class="title">{{detail.title}}</view>
+      <view class="status">待消费</view>
+    </view>
+    <view class="price">￥{{detail.price}} ×{{detail.num}}</view>
+    <view class="tags row">
+      <view>随时退</view>
+      <view>过期退</view>
+    </view>
+    <navigator url="/pages/refund/refund?title={{detail.title}}&price={{detail.price}}&num={{detail.num}}&totalPrice={{detail.totalPrice}}&orderId={{detail.orderId}}" class="btn">申请退款</navigator> 
+  </view>
+</view>
+<view class="detail mt-20" wx:if="{{detail}}">
+  <view class="title">订单详情</view>
+  <view>
+    <view class="cell row-between">
+      订单编号
+      <text>{{detail.trade_no}}</text>
+    </view>
+    <view class="cell row-between">
+      价格
+      <text>￥{{detail.totalPrice}}</text>
+    </view>
+    <view class="cell row-between">
+      优惠券
+      <text class="price">-￥20</text>
+    </view>
+    <view class="cell row-between">
+      店铺活动
+      <text>满100减10</text>
+    </view>
+    <view class="cell row-between">
+      金额
+      <text class="price">￥{{detail.totalPrice}}</text>
+    </view>
+    <view class="cell row-between">
+      支付方式
+      <text>微信支付</text>
+    </view>
+    <view class="cell row-between">
+      下单时间
+      <text>{{detail.createTime}}</text>
+    </view>
+    <!-- <view class="cell row-between">
+      订单时间
+      <text>2018.06.20 - 2018.07.30</text>
+    </view> -->
+  </view>
+</view>

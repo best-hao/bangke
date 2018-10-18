@@ -1,0 +1,16 @@
+.upload {
+  width: 140rpx;
+  height: 140rpx;
+  border: 2rpx solid #c8c8c8;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.upload image {
+  width: 54rpx;
+  height: 44rpx;
+}
+.tempImg {
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+}

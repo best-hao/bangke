@@ -1,0 +1,8 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+<score-star icon-star="icon-star" score="4.9"></score-star>
+<score row-center="row-center" bindscore="score"></score>

@@ -1,0 +1,60 @@
+<view class="wrap row header">
+  <image class="logo" src="{{logo}}"></image>
+  {{companyName}}
+</view>
+<view class="wrap row product">
+  <image class="thum" src="{{poster}}"></image>
+  <view class="caption row-between">
+    <view>
+      <view class="product-title">{{title}}</view>
+      <view class="product-price mt-20">￥{{price}}</view>
+    </view>
+    <view>x{{num}}</view>
+  </view>
+</view>
+<view class="wrap tags row">
+  <view>过时退</view>
+  <view>随时退</view>
+</view>
+<view class="bar"></view>
+<view class="wrap cell row-between">
+  优惠券
+  <view class="right row">
+    <view class="price">-￥20.0</view>
+    <image class="icon-arrow-right" src="/images/arrow-right.png"></image>
+  </view>
+</view>
+<view class="wrap cell row-between">
+  活动
+  <view class="right row">
+   满100减10
+  </view>
+</view>
+<view class="wrap cell row">
+  <text>提交订单则表示</text>
+ 《用户购买协议》
+</view>
+<view class="footer row">
+  <view class="left row-center">
+    金额
+    <text>￥{{price * num}}</text>
+  </view>
+  <view class="right row-center" bindtap="showBuy">提交订单</view>
+</view>
+
+<!-- 弹框 开始 -->
+<view class="buy-wrap {{openBuy ? 'show' : ''}}" bindtap="hideBuy"> 
+  <view class="inner-wrap" catchtap="fn">
+    <view class="price-wrap row-center">
+      金额：
+      <text>￥{{price * num}}</text>
+    </view>
+    <view class="tips">请在24小时内完成支付</view>
+    <view class="buy-btn" bindtap="requestPay">确认支付</view>
+    <view class="pay-cell row-between">
+      微信支付
+      <icon type="success" size="20" />
+    </view>
+  </view>
+</view>
+<!-- 弹框 结束 -->

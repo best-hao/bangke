@@ -1,0 +1,29 @@
+<view class="header">
+  <view class="userinfo row">
+    <view class="avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="username">
+      <open-data type="userNickName"></open-data>
+      <view class="row phone-wrap">
+        <image class="phone" src="/images/phone.png"></image>
+        180****6382
+      </view>
+    </view>
+  </view>
+  <navigator class="message" url="{{message.url}}">
+    <image class="icon" src="{{message.icon}}"></image>
+    <text class="sup">21</text>
+  </navigator>
+</view>
+
+<view class="getory-lists">
+  <block wx:for="{{entryList}}" wx:key="item">
+    <view class="getory">
+      <navigator url="{{item.url}}" class="cell">
+        <view><image class="icon" src="{{item.icon}}"></image></view>
+        <view class="txt">{{item.text}}</view>
+      </navigator>
+    </view>
+  </block>
+</view>
